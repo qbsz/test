@@ -2,30 +2,3 @@
 <script src="https://crq.js.org/bwb-timer/js/timer.js"></script>
 <body onload="loadtimer(text='hello',time='3000')">
 <div class="wrapper" id="timer mix"></div>
-<script>
-var o = document.getElementById("timer mix");
-function getTime(){
-    var date = new Date();	
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-    var hour = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
-    month = addZero(month);
-    day = addZero(day);
-    hour = addZero(hour);
-    minutes = addZero(minutes);
-    seconds = addZero(seconds);
-    var time = month + "/" + day + "/" + year + " " + hour + ":" + minutes + ":" + seconds;
-    o.innerHTML = time;
-  }
-    function addZero(az) {
-      if(az < 10){
-        az = "0" + az;
-	  }
-      return az;
-}
-getTime();
-setInterval(getTime,10);
-</script>
